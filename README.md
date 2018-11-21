@@ -20,3 +20,12 @@ Participating in ES6 for Everyone course by @wesbos
 ### const variables
 * Cannot be updated
 * const object attributes can be updated
+
+## 3 - let and const in the Real World
+
+### iife (immediately-invoked function expression)
+* a function that runs immediately (self invoked anonymous function)
+* Prevents variables from leaking into global scope if defined within iffy
+
+### replacing the iife
+* if you declare a const inside {}, you don't have to use an iife

@@ -6,10 +6,38 @@
 </head>
 <body>
 <script>
+
+  // var name = "Wes";
+  // This is not OK because window has a name attribute and this overrides it because it is declared globally
+
+  // Declare inside iife instead:
+  (function(){
+    var name = "Ben";
+    console.log(name);
+  })();
+
+  // However... that is equivalent to:
+  {
+    const name = 'ben';
+    console.log(name);
+  }
+
   {
     const name = 'wes';
     console.log(name);
   }
+
+  // Let is useful in for loops
+  // 1) we don't want the counter to be leaked into global scope
+  // 2) if it's var, it gets overwritten
+
+  for(var var_counter = 0; var_counter < 10; var_counter++) {
+    console.log(var_counter);
+    setTimeout(function() {
+      console.log('The number is ' + var_counter);
+    },1000);
+  }
+  // Result: "The number is 10" logged 10 times
 
   for(let i = 0; i < 10; i++) {
     console.log(i);
@@ -17,6 +45,16 @@
       console.log('The number is ' + i);
     },1000);
   }
+  // The number is 0
+  // The number is 1
+  // The number is 2
+  // The number is 3
+  // The number is 4
+  // The number is 5
+  // The number is 6
+  // The number is 7
+  // The number is 8
+  // The number is 9
 
 </script>
 </body>
