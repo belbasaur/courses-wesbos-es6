@@ -10,3 +10,11 @@ Participating in ES6 for Everyone course by @wesbos
 
 ### let and const variables
 * Block scope: scoped to the block (anything between an opening and closing curly bracket)
+
+### let variables
+* Can only be declared once (in the same scope)
+* Are made to be updated
+
+### const variables
+* Cannot be updated
+* const object attributes can be updated

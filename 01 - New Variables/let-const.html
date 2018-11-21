@@ -15,7 +15,16 @@
     age: 28
   }
 
+  // Properties of a const object can be updated
+  person.age = 29;
+  console.log(person);
+
+  // freeze prevents you from updating properties of an object (not part of es6)
   const wes = Object.freeze(person);
+
+  // Unless you used freeze()
+  person.age = 30;
+  console.log(person);
 
 </script>
 </body>
