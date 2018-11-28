@@ -7,6 +7,14 @@
 <body>
 <script>
   console.log(pizza);
+
+  /* 
+  
+  This area here is the temporal dead zone.
+  pizza is 'undefined', i.e., it exists.
+  If pizza was a const (and not var), you would get an error instead: pizza is not defined
+  
+  */
   const pizza = 'Deep Dish 🍕🍕🍕';
 
 </script>

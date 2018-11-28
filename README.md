@@ -29,3 +29,8 @@ Participating in ES6 for Everyone course by @wesbos
 
 ### replacing the iife
 * if you declare a const inside {}, you don't have to use an iife
+
+## 4 - Temporal dead zone
+* You cannot access a variable before it is defined
+* If you try to use a variable before it is defined, the variable is undefined, and doesn't give an error.
+* If, however, it is e.g. a const (and not var), you would get an error instead: varname is not defined
