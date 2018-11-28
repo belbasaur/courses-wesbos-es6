@@ -48,3 +48,12 @@ Participating in ES6 for Everyone course by @wesbos
 * Use var for top-level variables that are shared across many (especially larger) scopes.
 * Use let for localized variables in smaller scopes.
 * Refactor let to const only after some code has to be written, and you’re reasonably sure that you’ve got a case where there shouldn’t be variable reassignment.
+
+## 6 - Arrow functions introduction
+
+### 3 main benefits
+* Much more concise than regular functions
+* They have implicit returns which allows us to write nifty one liners
+* It doesn't rebind the value of this when you use an arrow function inside another function
+
+* Arrow functions are always anonymous functions

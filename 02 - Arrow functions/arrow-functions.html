@@ -11,22 +11,67 @@
   const fullNames = names.map(function(name) {
     return `${name} bos`;
   });
+  /* 
+  The map() method creates a new array with the results of 
+  calling a provided function on every element in the calling array. 
+  */
+
+  console.log(fullNames);
+
+  /* 
+  To create an arrow function:
+  1 - Delete the word function
+  2 - Insert a fat arrow before curly bracket
+  */
 
   const fullNames2 = names.map((name) => {
     return `${name} bos`;
   });
 
+  console.log(fullNames2);
+
+  /* 
+  However, if you only have one parameter, you can remove the parenthesis around the parameter
+  for stylistic purposes
+  */
+
   const fullNames3 = names.map(name => {
     return `${name} bos`;
   });
 
+  console.log(fullNames3);
+
+  /* 
+  To do an implicit return:
+  1 - Remove keyword return
+  2 - Put the whole thing in one line
+  3 - Remove curly brackets around function body
+  */
+
   const fullNames4 = names.map(name => `${name} bos`);
 
+  console.log(fullNames4);
+ 
+  // If you have no arguments, replace argument with () empty parenthesis
+ 
   const fullNames5 = names.map(() => `cool bos`);
 
-  const sayMyName = (name) => {
-    alert(`Hello ${name}!`)
+  console.log(fullNames5);
+  
+  // Arrow functions are always anonymous functions
+
+  // This is a named function:
+  function sayMyName2(name) {
+    alert(`Hello ${name}!`);
   }
+
+  /* 
+  Benefits of named function:
+  You have a stack trace, i.e., if you have an error, you can see in which function it occured
+  */
+
+  // This puts an anonymous function inside variable sayMyName
+  const sayMyName = (name) => { alert(`Hello ${name}!`) }
 
   sayMyName('Wes');
 
