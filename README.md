@@ -34,3 +34,17 @@ Participating in ES6 for Everyone course by @wesbos
 * You cannot access a variable before it is defined
 * If you try to use a variable before it is defined, the variable is undefined, and doesn't give an error.
 * If, however, it is e.g. a const (and not var), you would get an error instead: varname is not defined
+
+## 5 - Is var dead? What should I use?
+* There are 2 leading opinions:
+* https://wesbos.com/is-var-dead/
+
+### Mathias Bynens:
+* Use const by default.
+* Use let only if rebinding is needed.
+* var should not be ever used in ES6.
+
+### Kyle Simpson
+* Use var for top-level variables that are shared across many (especially larger) scopes.
+* Use let for localized variables in smaller scopes.
+* Refactor let to const only after some code has to be written, and you’re reasonably sure that you’ve got a case where there shouldn’t be variable reassignment.
