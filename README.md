@@ -57,3 +57,25 @@ Participating in ES6 for Everyone course by @wesbos
 * It doesn't rebind the value of this when you use an arrow function inside another function
 
 * Arrow functions are always anonymous functions
+
+### Implicit return with an object literal
+* If we want the arrow function to return an object
+* Wrap the function block, i.e., the curly brackets, in parenthesis
+* Instead of specifying property `race: race`, e.g.
+```
+const win = winners.map((winner, i) => ({name: winner, race: race, place: i + 1}));
+```
+* You can just use `race`, e.g.
+```
+const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+```
+
+* Nifty tip, to view object in a table, use console.table()
+```
+console.table();
+```
+### Arrow function that filters an array:
+```
+const ages = [23,62,45,234,2,62,234,62,34];
+const old = ages.filter(age => age >= 60);
+```

@@ -10,10 +10,18 @@
 const race = '100m Dash';
 const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
 
+// Now we want the arrow funcion to return an object, so we wrap the curly brackets in parethesis:
+// Implicit return with an object literal
 const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
 
-const ages = [23,62,45,234,2,62,234,62,34];
+// Nifty tip: to view object in a table:
+console.table(win);
 
+// ES6 feature: 
+// For property race, instead of using race: race, which seems redundant, you can just use race
+
+// Arrow function that filters an array:
+const ages = [23,62,45,234,2,62,234,62,34];
 const old = ages.filter(age => age >= 60);
 console.log(old);
 
