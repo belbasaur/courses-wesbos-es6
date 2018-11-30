@@ -79,3 +79,14 @@ console.table();
 const ages = [23,62,45,234,2,62,234,62,34];
 const old = ages.filter(age => age >= 60);
 ```
+
+### When NOT to use arrow function (lesson 8)
+* This keyword does not get rebound inside arrow function, so if you're using this, don't use arrow function
+* When you have an arrow function, it does not change the value of this, this is useful if you want to use, a function inside it
+* If you use an arrow function inside of a normal function, it is going to inherit the value of this
+
+### Hottitp: to switch two variables in ES6:
+```
+[first, second] = [second, first];
+```
+
