@@ -90,3 +90,7 @@ const old = ages.filter(age => age >= 60);
 [first, second] = [second, first];
 ```
 
+## 9 - Default function arguments
+
+* You can set arguments when you define them using `=` in the argument list
+* In a list of 3 arguments, how do you can the function with only the first and last: use keyword `undefined`
