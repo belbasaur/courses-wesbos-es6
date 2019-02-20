@@ -100,3 +100,13 @@ const old = ages.filter(age => age >= 60);
 * When you need a method to bind to an object. And when you do this, you do not use the function keyword
 * When you need to add a prototype method
 * You don't have access to the arguments object when using an arrow function
+
+## 11 - Template strings intro
+* When using template strings you no longer need to concatenate strings with +.
+```
+const sentence1 = `My dog ${name} is ${age * 7} years old.`;
+```
+As opposed to:
+```
+const sentence2 = 'My dog ' + name + ' is ' + age * 7 + ' years old.';
+```
