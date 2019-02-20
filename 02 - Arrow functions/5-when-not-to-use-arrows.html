@@ -14,7 +14,8 @@
 <script>
   // When you really need `this`
   const button = document.querySelector('#pushy');
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function() { // As opposed to:
+  // button.addEventListener('click', () => {
     console.log(this);
     this.classList.toggle('on');
   });
@@ -23,6 +24,8 @@
   const person = {
     points: 23,
     score() {
+    // As opposed to:
+    // score: () => {
       console.log(this);
       this.points++;
     }
@@ -39,12 +42,14 @@
   const beemer = new Car('bmw', 'blue');
   const subie = new Car('Subaru', 'white');
 
-  Car.prototype.summarize = function() {
+  Car.prototype.summarize = function() { // As opposed to:
+  // Car.prototype.summarize = () => {
      return `This car is a ${this.make} in the colour ${this.colour}`;
   };
 
   // When you need arguments object
-  const orderChildren = function() {
+  const orderChildren = function() { // As opposed to:
+  // const orderChildren = () => {
     const children = Array.from(arguments);
     return children.map((child, i) => {
       return `${child} was child #${i + 1}`;

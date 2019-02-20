@@ -80,7 +80,7 @@ const ages = [23,62,45,234,2,62,234,62,34];
 const old = ages.filter(age => age >= 60);
 ```
 
-### When NOT to use arrow function (lesson 8)
+## 8 - Arrow functions and `this` (When NOT to use arrow function) 
 * This keyword does not get rebound inside arrow function, so if you're using this, don't use arrow function
 * When you have an arrow function, it does not change the value of this, this is useful if you want to use, a function inside it
 * If you use an arrow function inside of a normal function, it is going to inherit the value of this
@@ -94,3 +94,9 @@ const old = ages.filter(age => age >= 60);
 
 * You can set arguments when you define them using `=` in the argument list
 * In a list of 3 arguments, how do you can the function with only the first and last: use keyword `undefined`
+
+## 10  - When NOT to use arrow function
+* When you really need `this`. Because when you use an arrow function the keyword this is bound to window
+* When you need a method to bind to an object. And when you do this, you do not use the function keyword
+* When you need to add a prototype method
+* You don't have access to the arguments object when using an arrow function
