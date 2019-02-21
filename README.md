@@ -110,3 +110,71 @@ As opposed to:
 ```
 const sentence2 = 'My dog ' + name + ' is ' + age * 7 + ' years old.';
 ```
+
+## 12 - Creating HTML fragments with template literals
+* To create multi line strings requires backslashes at the end of the line, e.g.,
+```
+var text = "hello there \
+how are you \
+";
+```
+* This is a bit messy
+* Instead use template strings, much easier to create HTML fragments (`2-template-strings-html.html`):
+```
+const markup = `
+    <div class="person">
+      <h2>
+        ${person.name}
+        <span class="job">${person.job}</span>
+      </h2>
+      <p class="location">${person.city}</p>
+      <p class="bio">${person.bio}</p>
+    </div>
+  `;
+```
+* Preserves tabs and spaces
+* You can nest them inside each other (`3-template-strings-looping.html`), e.g.,
+```
+const markup = `
+    <ul class="dogs">
+      ${dogs.map(dog => `
+        <li>
+          ${dog.name}
+          is
+          ${dog.age * 7}
+        </li>`).join('')}
+    </ul>
+  `;
+```
+* Useful if you need looping inside
+* You can also do if statements inside (`4-template-strings-if.html`):
+```
+const markup = `
+    <div class="song">
+      <p>
+        ${song.name} — ${song.artist}
+        ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+      </p>
+    </div>
+  `;
+```
+* When data gets complex, e.g., nesting inside nesting inside nesting, code becomes hard to maintain.
+* Create a render function. You can just run a function inside template tags (`5-template-strings-render-functions.html`):
+```
+function renderKeywords(keywords) {
+    return `
+      <ul>
+        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+      </ul>
+    `;
+  }
+
+  const markup = `
+    <div class="beer">
+      <h2>${beer.name}</h2>
+      <p class="brewery">${beer.brewery}</p>
+      ${renderKeywords(beer.keywords)}
+    </div>
+  `;
+  ```
+* Items are joined together with commas, use `.join('')` to join with nothing.
